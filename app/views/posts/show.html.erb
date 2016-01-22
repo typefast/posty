@@ -7,7 +7,7 @@
 
 <%= form_for [@post, @post.comments.build] do |f| %>
   
-  <%= f.label :title %>
+  <%= f.label :title, "Name" %>
   <%= f.text_field :title %>
   
   <%= f.label :body %>
@@ -18,10 +18,11 @@
 <% end %>
 
 <!--Show list of comments-->
-
-<h2>Comments</h2>
-
-<%= @post.comments.each do |comment| %>
-  <p>Title: <%= comment.title %></p>
-  <p>Body: <%= comment.body %></p>
+<% if @post.comments.exists? %>
+  <h2>Comments</h2>
+  
+  <% @post.comments.each do |comment| %>
+    <p><%= comment.title %></p>
+    <p><%= comment.body %></p>
+  <% end %>
 <% end %>
