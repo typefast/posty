@@ -2,3 +2,17 @@
 <%= @post.body %>
 
 <%= link_to 'Edit', edit_post_path(@post) %>
+
+<h2>Add a Comment</h2>
+
+<%= form_for [@article, @article.comments.build] do |f| %>
+  
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  
+  <%= f.label :body %>
+  <%= f.text_area :body %>  
+  
+  <%= f.submit "Submit" %>
+  
+<% end %>
