@@ -3,18 +3,23 @@
 
 <%= link_to 'Edit', edit_post_path(@post) %>
 
-<h2>Add a Comment</h2>
+<% if current_user %>
 
-<%= form_for [@post, @post.comments.build] do |f| %>
+  <h2>Add a Comment</h2>
   
-  <%= f.label :title, "Name" %>
-  <%= f.text_field :title %>
-  
-  <%= f.label :body %>
-  <%= f.text_area :body %>  
-  
-  <%= f.submit "Submit" %>
-  
+  <%= form_for [@post, @post.comments.build] do |f| %>
+    
+    <%= f.label :title, "Name" %>
+    <%= f.text_field :title %>
+    
+    <%= f.label :body %>
+    <%= f.text_area :body %>  
+    
+    <%= f.submit "Submit" %>
+    
+  <% end %>
+<% else %>
+  <p>You must be logged in to leave a comment!</p>
 <% end %>
 
 <!--Show list of comments-->
