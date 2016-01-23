@@ -2,6 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+div.success {
+  background: green;
+  color: #fff;
+  padding: 1em 0;
+    
+}
+  
+div.error {
+  padding: 1em 0;
+  background: #911;
+  color: #fff;
+}
+
 body {
   padding-bottom: 1em;
 }
@@ -109,18 +122,6 @@ footer {
   }
 }
 
-
-div.success {
-  background: green;
-  color: #fff;
-    
-}
-  
-div.error {
-  
-  background: 191;
-  color: #fff;
-}
 
 
 
