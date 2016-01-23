@@ -1,8 +1,22 @@
-<%= form_for @post, url: {action: "create" } do |f| %>
-  
-  <%= f.text_field :title, :placeholder => "Title" %>
-  <%= f.text_area :body, :placeholder => "Body...." %>
-  
-  <%= f.submit %>
-  
-<% end %>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <h1 class="text-center">New Post</h1>
+    <div class="well">
+
+      <%= form_for @post, url: {action: "create" } do |f| %>
+        
+        <div class="form-group">
+          <%= f.text_field :title, :placeholder => "Title", class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+          <%= f.text_area :body, :placeholder => "Body....", class: 'form-control' %>
+        </div>
+        
+        <%= f.submit "Submit", class: 'custom-btn' %>
+        
+      <% end %>
+
+    </div>
+  </div>
+</div>
