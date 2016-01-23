@@ -1,11 +1,30 @@
-<h1>Signup</h1>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <h1 class="text-center">Signup</h1>
+    <div class="well">
 
-<%= form_for :user, url: '/users' do |f| %>
-  
-  <%= f.text_field :name, :placeholder => "Name" %>
-  <%= f.email_field :email, :placeholder => "Email" %>
-  <%= f.password_field :password, :placeholder => "Password" %>
-  <%= f.password_field :password_confirmation, :placeholder => "Password (repeat)" %>
-  <%= f.submit "Submit" %>
-  
-<% end %>
+      <%= form_for :user, url: '/users' do |f| %>
+        
+        <div class="form-group">
+          <%= f.text_field :name, :placeholder => "Name", class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+          <%= f.email_field :email, :placeholder => "Email", class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+          <%= f.password_field :password, :placeholder => "Password", class: 'form-control' %>
+        </div>
+        
+        <div class="form-group">
+          <%= f.password_field :password_confirmation, :placeholder => "Password (repeat)", class: 'form-control' %>
+        </div>
+        
+          <%= f.submit "Submit", class: 'custom-btn' %>
+        
+      <% end %>
+      
+    </div>
+  </div>
+</div>
