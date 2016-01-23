@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  padding-bottom: 1em;
+}
+
 // nav
 
 .custom-nav-style {
@@ -20,6 +24,7 @@
   background: url('http://res.cloudinary.com/dq2bsl9c5/image/upload/v1453550782/mailbox_lkxyqa.jpg') no-repeat center center;
   background-size: cover;
   padding: 4em 0;
+  margin-bottom: 1em;
   
   
   h2 {
@@ -46,6 +51,13 @@
 // posts
 
 .post {
+  padding: 2em 0;
+  padding-left: 1em;
+  
+  &:hover {
+    background: lightblue;
+    transition: background, .4s ease-in-out;
+  }
   
   h2 {
     font-size: 3em;
@@ -54,6 +66,14 @@
   
   p {
     letter-spacing: 1.2px;
-    
   }
+}
+
+.left-post .post {
+  
+  border-right: 4px solid #333;
+}
+
+.right-post .post {
+  
 }
