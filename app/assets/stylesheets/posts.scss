@@ -7,6 +7,7 @@
 .custom-nav-style {
   margin-bottom: 0px;
   background: #eee;
+  box-shadow: 4px 0px 10px #111;
   
   span.icon-bar {
     background-color: #111;
@@ -19,6 +20,7 @@
   background: url('http://res.cloudinary.com/dq2bsl9c5/image/upload/v1453550782/mailbox_lkxyqa.jpg') no-repeat center center;
   background-size: cover;
   padding: 4em 0;
+  
   
   h2 {
     color: #fff;
@@ -38,5 +40,20 @@
     border-radius: 3px;
     letter-spacing: 1.3px;
     text-transform: uppercase;
+  }
+}
+
+// posts
+
+.post {
+  
+  h2 {
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+  
+  p {
+    letter-spacing: 1.2px;
+    
   }
 }
