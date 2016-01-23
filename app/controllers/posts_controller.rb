@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   
+  before_action :require_admin, only: [:new, :create, :edit]
+  
   def index 
     @posts = Post.all
   end
