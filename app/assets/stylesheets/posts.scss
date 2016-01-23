@@ -21,7 +21,7 @@ p.login-comment {
 .custom-nav-style {
   margin-bottom: 0px;
   background: #eee;
-  box-shadow: 4px 0px 10px #111;
+  border-bottom: 1px solid black;
   
   span.icon-bar {
     background-color: #111;
@@ -110,6 +110,17 @@ footer {
 }
 
 
+div.success {
+  background: green;
+  color: #fff;
+    
+}
+  
+div.error {
+  
+  background: 191;
+  color: #fff;
+}
 
 
 
