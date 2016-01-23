@@ -16,10 +16,11 @@
   <% @posts.reverse_each do |post| %>
     <div class="<%= cycle('col-md-6 left-post', 'col-md-6 col-md-offset-6 right-post') %>">
       <div class="post">
+        <p><%= post.created_at.to_formatted_s(:long)  %></p>
         <h2><%= post.title %></h2>
         <p><%= truncate(post.body, length: 50) %></p>
         <%= link_to "More", post_path(post) %>
-        <p>// show comments</p>
+        <p><%= post.comments.count %> Comments </p>
       </div>
     </div>
   <% end %>
