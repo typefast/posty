@@ -1,35 +1,54 @@
-<h2><%= @post.title %></h2>
-<%= @post.body %>
-
-<% if current_user && current_user.admin? %>
-  <%= link_to 'Edit', edit_post_path(@post) %>
-<% end %>
-
-<% if current_user %>
-
-  <h2>Add a Comment</h2>
-  
-  <%= form_for [@post, @post.comments.build] do |f| %>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
     
-    <%= f.label :title, "Name" %>
-    <%= f.text_field :title %>
+    <div class="post">
+      <h2><%= @post.title %></h2>
+      <p><%= @post.body %></p>
+    </div>
     
-    <%= f.label :body %>
-    <%= f.text_area :body %>  
+    <% if current_user && current_user.admin? %>
+      <%= link_to 'Edit', edit_post_path(@post) %>
+    <% end %>
     
-    <%= f.submit "Submit" %>
+    <% if current_user %>
     
-  <% end %>
-<% else %>
-  <p>You must be logged in to leave a comment!</p>
-<% end %>
+      <h2 class="text-center">Add a Comment</h2>
+      
+      <div class="well">
+        <%= form_for [@post, @post.comments.build] do |f| %>
+          
+          <div class="form-group">
+            <%= f.label :title, "Name" %>
+            <%= f.text_field :title, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :body %>
+            <%= f.text_area :body, class: 'form-control' %>  
+          </div>
+          
+          <%= f.submit "Submit", class: 'custom-btn' %>
+          
+        <% end %>
+      </div>
+    <% else %>
+      <p class="login-comment">You must be logged in to leave a comment!</p>
+    <% end %>
+    
+    <!--Show list of comments-->
+    <% if @post.comments.exists? %>
+      <h2>Comments</h2>
+      
+      <% @post.comments.each do |comment| %>
+        <div class="comment">
+          <p><%= comment.title %></p>
+          <p><%= comment.body %></p>
+        </div>
+      <% end %>
+    <% end %>
 
-<!--Show list of comments-->
-<% if @post.comments.exists? %>
-  <h2>Comments</h2>
-  
-  <% @post.comments.each do |comment| %>
-    <p><%= comment.title %></p>
-    <p><%= comment.body %></p>
-  <% end %>
-<% end %>
+
+  </div>
+</div>
+
+
