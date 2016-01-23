@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// nav
+
+.custom-nav-style {
+  margin-bottom: 0px;
+  background: #eee;
+  
+  span.icon-bar {
+    background-color: #111;
+  }
+}
+
 // banner
 
 .banner {

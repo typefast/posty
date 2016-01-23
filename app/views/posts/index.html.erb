@@ -3,7 +3,11 @@
   
   <h2 class="text-center">Posty - You've got mail!</h2>
   
-  <p class="text-center"><%= link_to 'Sign up', '/signup', class: "signup-button" %></p>
+  <p class="text-center">
+    <% if !current_user %>
+      <%= link_to 'Sign up', '/signup', class: "signup-button" %>
+    <% end %>
+  </p>
   
 </div>
 
