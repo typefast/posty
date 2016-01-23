@@ -1,4 +1,12 @@
 
+<div class="banner">
+  
+  <h2 class="text-center">Posty - You've got mail!</h2>
+  
+  <p class="text-center"><%= link_to 'Sign up', '/signup', class: "signup-button" %></p>
+  
+</div>
+
 <div class="container">
   <% @posts.reverse_each do |post| %>
     <h2><%= post.title %></h2>

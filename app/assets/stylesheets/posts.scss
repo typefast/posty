@@ -1,3 +1,31 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// banner
+
+.banner {
+  background: url('http://res.cloudinary.com/dq2bsl9c5/image/upload/v1453550782/mailbox_lkxyqa.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 4em 0;
+  
+  h2 {
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+    padding: 2em 0;
+    text-shadow: 2px 2px #333;
+  }
+  
+  a.signup-button {
+    margin: 2em 0;
+    background: #ADD8E6;
+    padding: 1em 3em;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 3px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+  }
+}
